@@ -3,7 +3,7 @@
 <script type="text/javascript" src="{% static 'sailbot/javascript/form.js' %}"></script>
 
 <h2>Sensor Form</h2>
-<form>
+<form id="sensorform">
   {% for d in model.Attributes %}
     <label for="">{{d}}</label>
     <input type="text" value="test">

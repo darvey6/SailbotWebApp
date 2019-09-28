@@ -28,6 +28,9 @@ def get_all_accelerometer():
     Accelerometer = models.Accelerometer.objects.all()
     return get_model(models.Accelerometer._meta.fields, Accelerometer, 'Accelerometer', 'sailbot-accelerometer')
 
+def get_all_ModifiableColumn(sensortype):
+    ModifialbeColumn = models.ModifiableColumn.objects.all()
+
 def get_model(attributes, model, sensorName, name):
     return {'Attributes': [f.name for f in attributes],
             'Sensors': model,
