@@ -1,5 +1,7 @@
 from django.apps import AppConfig
+from threading import Thread
+from network_table import index
 
-
-class BlogConfig(AppConfig):
-    name = 'sailbot'
+if __name__ == "__main__":
+    thread = Thread(target=index.subscribe)
+    thread.start()
