@@ -5,11 +5,19 @@ from generated import SubscribeReply_pb2
 from generated import Request_pb2
 from generated import SubscribeRequest_pb2
 
+sock = zmq.socket('pair')
+
 def subscribe():
     context = zmq.Context()
-    init_sock = context.socket(zmq.SUB)
+    init_sock = context.socket(zmq.REQ)
     init_sock.connect('ipc:///tmp/sailbot/NetworkTable')
-    init_sock.setsockopt(zmq.SUBSCRIBE, '')
+
+    init_socket.send("connect")
+
+    filepath = init_socket.recv()
+
+    socket = context.socket(zmq.PAIR)
+    socket.connect(filepath)
 
     while True:
         replyProto = Reply_pb2.Reply()
