@@ -15,15 +15,15 @@ Inside the project folder:
 - pipenv install
 
 ### After modifying any models or using a new database 
-python manage.py makemigrations
-python manage.py migrate
+- python manage.py makemigrations
+- python manage.py migrate
 
 ### Starting the program
 
-pipenv shell
-python manage.py runserver
+- pipenv shell
+- python manage.py runserver
 
 ### Database
 In django_sailbot/settings.py:
-Currently default to using sqlite3 for debugging.
-MySql database connection commented out.
+- Currently default to using sqlite3 for debugging.
+- MySql database connection commented out.
