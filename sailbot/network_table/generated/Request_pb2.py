@@ -13,10 +13,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import SetValuesRequest_pb2 as SetValuesRequest__pb2
-import GetNodesRequest_pb2 as GetNodesRequest__pb2
-import SubscribeRequest_pb2 as SubscribeRequest__pb2
-import UnsubscribeRequest_pb2 as UnsubscribeRequest__pb2
+from . import SetValuesRequest_pb2 as SetValuesRequest__pb2
+from . import GetNodesRequest_pb2 as GetNodesRequest__pb2
+from . import SubscribeRequest_pb2 as SubscribeRequest__pb2
+from . import UnsubscribeRequest_pb2 as UnsubscribeRequest__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

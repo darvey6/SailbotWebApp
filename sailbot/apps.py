@@ -1,7 +1,10 @@
 from django.apps import AppConfig
-from threading import Thread
-from network_table import index
 
-if __name__ == "__main__":
-    thread = Thread(target=index.subscribe)
-    thread.start()
+class SailbotConfig(AppConfig):
+    name = 'sailbot'
+    verbose_name = "My Application"
+    def ready(self):
+        from threading import Thread
+        from .network_table import index
+        thread = Thread(target=index.subscribe)
+        thread.start()

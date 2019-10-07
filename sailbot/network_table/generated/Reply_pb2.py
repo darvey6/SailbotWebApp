@@ -12,10 +12,9 @@ from google.protobuf import symbol_database as _symbol_database
 
 _sym_db = _symbol_database.Default()
 
-
-import GetNodesReply_pb2 as GetNodesReply__pb2
-import SubscribeReply_pb2 as SubscribeReply__pb2
-import ErrorReply_pb2 as ErrorReply__pb2
+from . import GetNodesReply_pb2 as GetNodesReply__pb2
+from . import SubscribeReply_pb2 as SubscribeReply__pb2
+from . import ErrorReply_pb2 as ErrorReply__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
